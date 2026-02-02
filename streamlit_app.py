@@ -1,10 +1,10 @@
 import streamlit as st
 from recommender import load_data, build_item_knn, find_movie_by_title, recommend
 
-st.set_page_config(page_title="KNN Movie Recommender", page_icon="🎬", layout="wide")
+st.set_page_config(page_title=" Movie Recommender", page_icon="🎬", layout="wide")
 
-st.title("🎬 KNN Movie Recommender")
-st.write("Item-based collaborative filtering using KNN on MovieLens (ml-latest-small)")
+st.title("🎬  Movie Recommender")
+st.write("Item-based collaborative filtering on MovieLens (ml-latest-small)")
 
 @st.cache_data
 def cached_load_data():
@@ -65,4 +65,3 @@ with col2:
             st.error(str(e))
 
 st.markdown("---")
-st.write("Tip: Use the sidebar search to find a movie. The first model build may take a moment while data is downloaded and the KNN model is trained.")
